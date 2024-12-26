@@ -24,18 +24,18 @@ const Login: React.FC = () => {
       alert("Login successful!");
       // navigate("/product")
     } catch (err) {
-      console.error("Login failed:", err);
+      // console.error("Login failed:", err);
     }
   };
   useEffect(() => {
-    console.log(data);
+    // console.log(data);
     if (isSuccess) {
       if (data?.user?.role === "user") {
-        console.log("PRODUCT");
+
         navigate("/product")
       } else {
         navigate("/admin/")
-        console.log("ddd");
+
       }
     }
   }, [isSuccess])
