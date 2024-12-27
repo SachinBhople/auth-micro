@@ -29,12 +29,7 @@ const Login: React.FC = () => {
   };
   useEffect(() => {
     if (isSuccess) {
-      if (data?.user?.role === "user") {
-        navigate("/product")
-      } else {
-        navigate("/admin/")
-
-      }
+      navigate("/product")
     }
   }, [isSuccess])
 
