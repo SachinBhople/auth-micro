@@ -33,7 +33,8 @@ const Login: React.FC = () => {
       if (data?.user?.role === "user") {
 
         // navigate("/product")
-        navigate("/order/order")
+        // navigate("/order/order")
+        navigate("/auth/register")
       } else {
         navigate("/admin/")
 
