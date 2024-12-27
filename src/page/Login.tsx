@@ -32,7 +32,8 @@ const Login: React.FC = () => {
     if (isSuccess) {
       if (data?.user?.role === "user") {
 
-        navigate("/product")
+        // navigate("/product")
+        navigate("/order/order")
       } else {
         navigate("/admin/")
 
@@ -44,7 +45,7 @@ const Login: React.FC = () => {
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="bg-white p-8 shadow-lg rounded-lg w-full max-w-md border border-gray-300">
         <h2 className="text-3xl font-extrabold text-center mb-6 text-gray-800">
-          Welcome Back
+          Welcome
         </h2>
         <form onSubmit={handleSubmit(onSubmit)} noValidate>
           {/* Email */}
