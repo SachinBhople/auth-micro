@@ -27,17 +27,16 @@ const Login: React.FC = () => {
       // console.error("Login failed:", err);
     }
   };
-  // useEffect(() => {
-  //   // console.log(data);
-  //   if (isSuccess) {
-  //     if (data?.user?.role === "user") {
-  //       navigate("/product")
-  //     } else {
-  //       navigate("/admin/")
+  useEffect(() => {
+    if (isSuccess) {
+      if (data?.user?.role === "user") {
+        navigate("/product")
+      } else {
+        navigate("/admin/")
 
-  //     }
-  //   }
-  // }, [isSuccess])
+      }
+    }
+  }, [isSuccess])
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
